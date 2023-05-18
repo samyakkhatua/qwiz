@@ -9,17 +9,18 @@ const Question = ({
       <h1 className="question">{currentQuestion.question}</h1>
       <div className="options">
         {currentQuestion.options.map((option) => (
-          <label htmlFor="">
+          <label htmlFor={option.text}>
             <input
               type="radio"
               value={option.text}
+              id={option.text}
               onChange={() =>
                 updateSubmission(currentQuestionIndex, option.text)
               }
               name={currentQuestion.question}
               checked={option.text === submittedOption}
             />
-            
+
             {option.text}
           </label>
         ))}

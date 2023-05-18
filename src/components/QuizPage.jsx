@@ -26,6 +26,7 @@ const QuizPage = () => {
         <NavButtons
           setCurrentQuestionIndex={setCurrentQuestionIndex}
           currentQuestionIndex={currentQuestionIndex}
+          submittedData={submittedData}
         />
       </div>
     </div>
