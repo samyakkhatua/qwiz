@@ -2,6 +2,7 @@ const Question = ({
   currentQuestionIndex,
   currentQuestion,
   updateSubmission,
+  submittedOption
 }) => {
   return (
     <div>
@@ -15,7 +16,10 @@ const Question = ({
               onChange={() =>
                 updateSubmission(currentQuestionIndex, option.text)
               }
+              name={currentQuestion.question}
+              checked={option.text === submittedOption}
             />
+
             {option.text}
           </label>
         ))}

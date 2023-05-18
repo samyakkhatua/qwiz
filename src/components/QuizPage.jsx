@@ -21,6 +21,7 @@ const QuizPage = () => {
           currentQuestionIndex={currentQuestionIndex}
           currentQuestion={QuestionsData[currentQuestionIndex]}
           updateSubmission={updateSubmission}
+          submittedOption={submittedData[currentQuestionIndex]}
         />
       </div>
     </div>
