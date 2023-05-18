@@ -2,7 +2,7 @@ const Question = ({
   currentQuestionIndex,
   currentQuestion,
   updateSubmission,
-  submittedOption
+  submittedOption,
 }) => {
   return (
     <div>
