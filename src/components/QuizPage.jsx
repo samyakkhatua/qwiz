@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { QuestionsData } from "../../QuestionData";
 import Question from "./Question";
+import NavButtons from "./NavButtons";
 
 const QuizPage = () => {
-
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [submittedData, setSubmittedData] = useState({});
 
@@ -11,7 +11,7 @@ const QuizPage = () => {
     setSubmittedData({ ...submittedData, [index]: value });
   };
 
-  console.log(submittedData)
+  console.log(submittedData);
 
   return (
     <div className="quiz-box">
@@ -22,6 +22,10 @@ const QuizPage = () => {
           currentQuestion={QuestionsData[currentQuestionIndex]}
           updateSubmission={updateSubmission}
           submittedOption={submittedData[currentQuestionIndex]}
+        />
+        <NavButtons
+          setCurrentQuestionIndex={setCurrentQuestionIndex}
+          currentQuestionIndex={currentQuestionIndex}
         />
       </div>
     </div>

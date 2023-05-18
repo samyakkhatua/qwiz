@@ -19,7 +19,7 @@ const Question = ({
               name={currentQuestion.question}
               checked={option.text === submittedOption}
             />
-
+            
             {option.text}
           </label>
         ))}
